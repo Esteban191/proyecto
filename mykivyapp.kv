@@ -1,0 +1,348 @@
+<Main>:
+    MDNavigationLayout:
+                
+        ScreenManager:
+            id:screen_manager
+                 
+            Screen:
+                name:"screen_inicio"
+                MDLabel:
+                    id:'titulo'
+                    text:"Bienvenidos a My App Digital"
+                    font_size:'30'
+                    size_hint:0.6,0.2
+                    pos_hint:{'center_x':0.6,'center_y':0.2}
+                    color:'black'
+                    
+
+                    
+                    
+                BoxLayout:
+                    orientation:'vertical'
+                    MDToolbar:
+                        title:'My App Digital'
+                        left_action_items:[['menu',lambda x: nav_bar.set_state('open')]]        
+            
+                Image:
+                    source: "procesa.png"
+                    size:(500,500)
+                    pos: (0,100) 
+             
+            Screen:
+                name:"screen_Espacio Color"
+                MDLabel:
+                    text:"Pagina Espacio Color"
+                    
+                BoxLayout:
+                    orientation:'vertical'
+                    MDToolbar:
+                        title:'My App Digital'
+                        left_action_items:[['menu',lambda x: nav_bar.set_state('open')]] 
+                    MDFloatLayout:
+                        Image: #FitImage
+                            id: pic
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            size_hint: 0.5, 0.6
+                            
+    
+##                    			 source: root.newpic #"i.jpeg" #"xbay.png"
+##                    			 size_hint: None, None
+##                    		     height: root.ids.cbor.height
+                        
+                        MDRoundFlatIconButton:
+                            text: "Open manager"
+                            icon: "folder"
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            on_release: app.file_manager_open()
+                            
+                        Button
+                            id:'OK'
+                            text:"Espacio de color"
+                            on_release:app.Cerebro5HLS()
+                            size_hint: (.2,0.1)
+                            pos_hint: {'x': .2, 'y': .1}                       
+                
+            Screen:
+                name:"screen_Operacion Basica"
+                MDLabel:
+                    text:"Operacion basica"
+                    
+
+                BoxLayout:
+                    orientation:'vertical'
+                    MDToolbar:
+                        title:'My App Digital'
+                        left_action_items:[['menu',lambda x: nav_bar.set_state('open')]]
+                    MDFloatLayout:
+                        Image: #FitImage
+                            id: pic
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            size_hint: 0.5, 0.6
+                            source: "i.jpeg"
+    
+##                    			 source: root.newpic #"i.jpeg" #"xbay.png"
+##                    			 size_hint: None, None
+##                    		     height: root.ids.cbor.height
+                        
+                        MDRoundFlatIconButton:
+                            text: "Open manager"
+                            icon: "folder"
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            on_release: app.file_manager_open()
+                            
+                        Button
+                            id:'OK'
+                            text:"NEGATIVO"
+                            on_release:app.negativo()
+                            size_hint: (.2,0.1)
+                            pos_hint: {'x': .2, 'y': .1}
+             
+             
+
+            Screen:
+                name:"screen_Operacion morfologica"
+                MDLabel:
+                    text:"Operacion morfologica"
+                    
+                BoxLayout:
+                    orientation:'vertical'
+                    MDToolbar:
+                        title:'My App Digital'
+                        left_action_items:[['menu',lambda x: nav_bar.set_state('open')]]
+                    MDFloatLayout:
+                        Image: #FitImage
+                            id: pic1
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            size_hint: 0.5, 0.6
+                            
+    
+##                    			 source: root.newpic #"i.jpeg" #"xbay.png"
+##                    			 size_hint: None, None
+##                    		     height: root.ids.cbor.height
+                        
+                        MDRoundFlatIconButton:
+                            text: "Open manager"
+                            icon: "folder"
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            on_release: app.file_manager_open()
+                            
+                        Button
+                            id:'OK'
+                            text:"Erosion"
+                            on_release:app.Cerebro2Erode()
+                            size_hint: (.2,0.1)
+                            pos_hint: {'x': .2, 'y': .1}              
+            Screen:
+                name:"screen_Filtro"
+                MDLabel:
+                    text:"Filtro"
+                    
+                BoxLayout:
+                    orientation:'vertical'
+                    MDToolbar:
+                        title:'My App Digital'
+                        left_action_items:[['menu',lambda x: nav_bar.set_state('open')]]
+                    MDFloatLayout:
+                        Image: #FitImage
+                            id: pic1
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            size_hint: 0.5, 0.6
+                            
+    
+##                    			 source: root.newpic #"i.jpeg" #"xbay.png"
+##                    			 size_hint: None, None
+##                    		     height: root.ids.cbor.height
+                        
+                        MDRoundFlatIconButton:
+                            text: "Open manager"
+                            icon: "folder"
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            on_release: app.file_manager_open()
+                            
+                        Button
+                            id:'OK'
+                            text:"filtro"
+                            on_release:app.Cerebro3filtoaltos()
+                            size_hint: (.2,0.1)
+                            pos_hint: {'x': .2, 'y': .1} 
+            Screen:
+                name:"screen_Salir"
+                MDLabel:
+                    
+                    
+                BoxLayout:
+                    orientation:'vertical'
+                    MDToolbar:
+                        title:'My App Digital'
+                        left_action_items:[['menu',lambda x: nav_bar.set_state('open')]]
+                Image:
+                    source: "gracia.jpg"
+                    size:(100,100)
+                    pos: (0,40)
+                    MDFloatLayout:
+                        Image: #FitImage
+                            id: pic1
+                            pos_hint: {'center_x': .5, 'center_y': .6}
+                            size_hint: 0.5, 0.6
+                            
+    
+                        
+            Screen:
+                name:"screen_View"
+                MDLabel:
+                    
+                BoxLayout:
+                    orientation:'vertical'
+                    MDToolbar:
+                        title:'My App Digital'
+                        left_action_items:[['menu',lambda x: nav_bar.set_state('open')]]
+
+                    MDFloatLayout:
+                        Image: #FitImage
+                            id: pic
+                            pos_hint: {'center_x': .5, 'center_y': .0}
+                            size_hint: 1, 1
+                            source: "i.jpeg"
+                           
+    
+##                    			 source: root.newpic #"i.jpeg" #"xbay.png"
+##                    			 size_hint: None, None
+##                    		     height: root.ids.cbor.height
+                        
+                        MDRoundFlatIconButton:
+                            text: "Open manager"
+                            icon: "folder"
+                            on_release: app.file_manager_open()
+
+                    Widget:
+        MDNavigationDrawer:
+            id:nav_bar
+            BoxLayout:
+                orientation:'vertical'
+                Image:
+                    source:'menu.png'
+                MDRectangleFlatIconButton:
+                    icon:'home'
+                    text:'Inicio'
+                    font_size:'20sp'
+                    size_hint_x:1
+                    size_hint_y:0.3
+                    on_release:screen_manager.current="screen_inicio"
+                    
+                MDRectangleFlatIconButton:
+                    icon:'safe'
+                    text:'Espacio Color'
+                    font_size:'20sp'
+                    size_hint_x:1
+                    size_hint_y:0.3
+                    on_release:screen_manager.current="screen_Espacio Color"
+                    
+                MDRectangleFlatIconButton:
+                    icon:'airballoon'
+                    text:'Operacion Basica'
+                    font_size:'20sp'
+                    size_hint_x:1
+                    size_hint_y:0.3
+                    on_release:screen_manager.current="screen_Operacion Basica"      
+          
+#            Grafica:
+#                name:"Grafica"
+#                BoxLayout:
+#                    orientation:'vertical'
+#                BoxLayout: 
+             
+#                    Image:
+#                        source:"i.jpg"
+#                        size:self.texture_size
+#                        background:True 
+                     
+#                    Button
+#                        id:'OK'
+#                        text:"NEGATIVO"
+#                        pos_hint:{'center_x':0.5,'center_y':0.6}
+#                        size_hint:(0.2,0.2)
+#                        background_color:(255,255,0)
+#                        on_release:app.negativo()
+#            Mycanvas: 
+ 
+     
+                               
+                    
+                    
+                MDRectangleFlatIconButton:
+                    icon:'abacus'
+                    text:'Operacion morfologica'
+                    font_size:'20sp'
+                    size_hint_x:1
+                    size_hint_y:0.3
+                    on_release:screen_manager.current="screen_Operacion morfologica"
+ 
+#        Grafica3:
+#         name:"Grafica3"
+#         BoxLayout:
+#             orientation:'vertical'
+#             BoxLayout: 
+#                
+#             Image:
+#                 source:"FRUTA.jpg"
+#                 size:self.texture_size
+#                 background:True
+#                
+#  
+#                 MDLabel:
+#                     text:"OPERACIONES MORFOLÓGICAS"
+#                     pos_hint:{'center_x':0.5,'center_y':0.5}
+#                     size_hint:0.2,0.2
+#                     font_size:'25'
+#                     color:'blue'
+#                     
+#                     text:'EROSIÓN'
+#                     pos_hint:{'center_x':0.5,'center_y':0.5}
+#                     size_hint:0.2,0.2
+#                     background_color:(0.7,0.2,0.4,1)
+#                     on_press:root.ero()    
+#                 Mycanvas3:      
+        
+#           Mycanvas:
+#               canvas:
+#                   Rectangle:
+#                       pos:(570,100)
+#                       size:(200,200)       
+
+
+
+                MDRectangleFlatIconButton:
+                    icon:'alarm-bell'
+                    text:'Filtro'
+                    font_size:'20sp'
+                    size_hint_x:1
+                    size_hint_y:0.3
+                    on_release:screen_manager.current="screen_Filtro"
+                MDRectangleFlatIconButton:
+                    icon:'abacus'
+                    text:'Vista'
+                    font_size:'20sp'
+                    size_hint_x:1
+                    size_hint_y:0.3
+                    on_release:screen_manager.current="screen_View"
+                    
+                MDRectangleFlatIconButton:
+                    icon:'share'
+                    text:'Salir'
+                    font_size:'20sp'
+                    size_hint_x:1
+                    size_hint_y:0.3
+                    color:(0,0,0, 1)
+                    on_release:screen_manager.current="screen_Salir"
+      
+#            Mycanvas:
+#                canvas:
+#                    Rectangle:
+#                        pos:(570,100)
+#                        size:(200,200)
+
+
+        
+
+                
+    
