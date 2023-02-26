@@ -1,0 +1,88 @@
+#:kivy 2.0.0
+
+<Panta1>:
+    name:"Panta1"
+    BoxLayout:
+        orientation:'vertical'
+             
+        BoxLayout:
+            orientation:'horizontal'
+            Image:
+                source:"1.jpeg"
+                size:self.texture_size
+                background:True
+            Button:
+                text:"Siguiente"
+                size_hint:0.2,0.2
+                on_press: root.manager.current="Panta2"
+        Label:
+            id:'titulo'
+            text:"BIOMEDICAL SOLUTIONS"
+            font_size:'30'
+            size_hint:0.6,0.3
+            pos_hint:{'center_x':0.5,'center_y':0}
+            color:'cyan'
+
+        Button:
+            id:'OK'
+            text:"NEGATIVO"
+            pos_hint:{'center_x':0.5,'center_y':0.6}
+            size_hint:(0.2,0.2)
+            background_color:(255,255,0)
+            on_press:root.negativo()
+        MiCanvas:
+                
+        Button:
+            id:'Salir'
+            text:"SALIR"
+            pos_hint:{'center_x':0.8,'center_y':0.2}
+            size_hint:(0.3,0.3)
+            on_release:app.stop()
+
+<Panta2>:
+    name:"Panta2"
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            Button:
+                text:'Anterior'
+                size_hint:0.05,0.2
+                on_press:root.manager.current='Panta1'
+            Label:
+                text:"OPERACIONES MORFOLÓGICAS"
+                pos_hint:{'center_x':0.5,'center_y':0.5}
+                size_hint:0.2,0.2
+                font_size:'25'
+                color:'blue'
+        Button:
+            text:'Binario'
+            pos_hint:{'center_x':0.5,'center_y':0.5}
+            size_hint:0.2,0.2
+            background_color:(0.7,0.2,0.4,1)
+            on_press:root.ero()
+            
+        MiCanvas2:
+                                        
+        
+
+
+<Principal>:
+
+    Panta1:
+    Panta2:
+    
+                
+<MiCanvas>: 
+    canvas:
+        Color:
+            rgb:[0,1,0.5]
+        Rectangle:  
+            pos:self.pos
+            size:self.size
+
+<MiCanvas2>:     
+    canvas:
+        Rectangle:
+            pos:(300,70)
+            size:(200,200)
+        
